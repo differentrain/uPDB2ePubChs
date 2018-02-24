@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace uPDB2ePubChs
@@ -14,9 +12,20 @@ namespace uPDB2ePubChs
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            using (var mutex = new Mutex(true, "d021617f-5565-4b2b-9d9e-314195ca3d50", out var createNew))
+            {
+                if (createNew)
+                {
+
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new FormMain());
+                }
+                else
+                {
+                    Environment.Exit(1);//It's not required but can send system a non-normal exit signal……
+                }
+            }
         }
     }
 }

@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("uPDB2ePubChs")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("将好读uPDB档案转化为简体ePub存档")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("differentrain")]
 [assembly: AssemblyProduct("uPDB2ePubChs")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright © differentrain  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
